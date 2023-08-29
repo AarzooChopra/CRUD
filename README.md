@@ -32,3 +32,38 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   * Send us the link when you are done the exercise (pglinker at plexxis dot com).
 
 When you are done, we'll schedule a zoom call with you where you will share your screen, demo the application for us, and walk us through the code while we ask questions about it.
+
+*****************************************************************************************************************************************
+
+## Description
+This CRUD application has the ability to:
+1. Retrieve employees from the JSON file
+2. Add them to an SQLite database
+3. Display them in a tabular form in a React application
+4. Create new employees
+5. Delete employees
+6. Update employees
+
+All the changes made to the employees in the React applocation are also made to the database. For the purposes of this exercise, the database loads the employees from the original JSON file at the start so that the original entries are maintained.
+
+The index.js file handles the backend of the application, while the App.js file handles the front-end. 
+
+## index.js
+* The database is initialized and entries are loaded from the JSON file.
+* app.get gets all the employees
+* app.delete uses the employee id to delete an employee
+* app.put uses the employee id to update the employee info
+* app.post adds a new employee
+* All the db operations take place in this file
+
+## App.js
+* There is a views folder which contains 3 files: Create.js, Edit.js and Display.js
+* These files contain classes to render the feilds to create a new employee, the table of employees, and the fields to update employee info.
+* Putting these in separate files instead of directly in App.js makes the code modular and easier to understand.
+* handleInputChange and handleCreate are responsible for getting the inputs from the input fields and creating a new employee
+* handleDelete gets the employee from the employee id and deletes it
+* handleEdit gets the selected employee, and handleEditInputChange gets the new inputs from the edit fields to update the employee
+* handleUpdate updates the employee on clicking the 'Save' button and handleCancel cancels the edit operation on clicking the 'Cancel' button
+
+## App.css
+This files is used to apply CSS styles to some of the elements.

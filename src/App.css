@@ -1,5 +1,33 @@
 h1 {
   font-size: 24px;
-  padding: 20px;
+  /* padding: 20px; */
   margin: 0;
+}
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th, .employee-table td {
+  padding: 5px;
+  border: 1px solid;
+  text-align: left;
+}
+
+.employee-table button {
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#edit {
+  background-color: gray;
+}
+
+#delete {
+  background-color: red;
+}
+
+input, label, button {
+  margin: 5px;
 }
